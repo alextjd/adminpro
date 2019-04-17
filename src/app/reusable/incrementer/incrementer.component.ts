@@ -33,6 +33,7 @@ export class IncrementerComponent implements OnInit {
     this.progress = isTextInput ? value : this.progress + value;
     this.checkProgress();
     this.valueChange.emit(this.progress);
+    this.progressText.nativeElement.focus();
   }
 
   // Control progress limits
