@@ -20,8 +20,8 @@ export class IncrementerComponent implements OnInit {
   ngOnInit() {}
 
   // Update progress value
-  changeProgress(value: number) {
-    this.progress = this.progress + value;
+  changeProgress(value: number, isTextInput?: boolean) {
+    this.progress = isTextInput ? value : this.progress + value;
     this.checkProgress();
     this.valueChange.emit(this.progress);
   }
@@ -34,5 +34,7 @@ export class IncrementerComponent implements OnInit {
     if (this.progress > this.max) {
       this.progress = this.max;
     }
+    const input: any = document.getElementById('progress-text');
+    input.value = this.progress;
   }
 }
