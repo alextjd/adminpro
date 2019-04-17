@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  EventEmitter,
+  Output,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-incrementer',
@@ -9,6 +17,7 @@ export class IncrementerComponent implements OnInit {
   @Input() title: string;
   @Input() progress: number;
   @Output() valueChange: EventEmitter<number> = new EventEmitter<number>();
+  @ViewChild('progressText') progressText: ElementRef;
   max: number = 100;
   min: number = 0;
 
@@ -34,7 +43,6 @@ export class IncrementerComponent implements OnInit {
     if (this.progress > this.max) {
       this.progress = this.max;
     }
-    const input: any = document.getElementById('progress-text');
-    input.value = this.progress;
+    this.progressText.nativeElement.value = this.progress;
   }
 }
