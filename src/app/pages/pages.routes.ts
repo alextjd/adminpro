@@ -3,6 +3,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GraphsComponent } from './graphs/graphs.component';
 import { NgModule } from '@angular/core';
+import { ProgressComponent } from './progress/progress.component';
 
 export const pagesRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ export const pagesRoutes: Routes = [
       {
         path: 'graphs',
         component: GraphsComponent,
+      },
+      {
+        path: 'progress',
+        component: ProgressComponent,
       },
       {
         path: '',

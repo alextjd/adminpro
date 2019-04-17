@@ -6,7 +6,7 @@ import { GraphsComponent } from './graphs/graphs.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
 import { LayoutModule } from '../layout/layout.module';
-import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { PagesRoutingModule } from './pages.routes';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { PagesRoutingModule } from './pages.routes';
     GraphsComponent,
     PagesComponent,
   ],
-  imports: [SharedModule, LayoutModule, PagesRoutingModule],
+  imports: [SharedModule, LayoutModule, FormsModule, PagesRoutingModule],
   exports: [
     ProgressComponent,
     DashboardComponent,
