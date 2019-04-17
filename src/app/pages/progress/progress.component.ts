@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ProgressComponent implements OnInit {
   max: number = 100;
   min: number = 0;
-  progress: number = 0;
+  progress: number;
 
-  constructor() {}
+  constructor() {
+    this.progress = 0;
+  }
 
   ngOnInit() {}
 

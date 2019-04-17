@@ -8,6 +8,7 @@ import { PagesComponent } from './pages.component';
 import { LayoutModule } from '../layout/layout.module';
 import { FormsModule } from '@angular/forms';
 import { PagesRoutingModule } from './pages.routes';
+import { IncrementerComponent } from '../reusable/incrementer/incrementer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PagesRoutingModule } from './pages.routes';
     ProgressComponent,
     GraphsComponent,
     PagesComponent,
+    IncrementerComponent,
   ],
   imports: [SharedModule, LayoutModule, FormsModule, PagesRoutingModule],
   exports: [

@@ -23,35 +23,11 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon1"
-              (click)="changeProgress(-5)"
-            >
-              <div><i class="mdi mdi-minus"></i></div>
-            </button>
-          </div>
-          <input
-            type="text"
-            class="form-control"
-            placeholder=""
-            name="progress-text"
-            [(ngModel)]="progress"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-              (click)="changeProgress(5)"
-            >
-              <div><i class="mdi mdi-plus"></i></div>
-            </button>
-          </div>
-        </div>
+        <app-incrementer
+          title="My progress"
+          [progress]="progress"
+          (valueChange)="progress = $event"
+        ></app-incrementer>
       </div>
     </div>
   </div>
