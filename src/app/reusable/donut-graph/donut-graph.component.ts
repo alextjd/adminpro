@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-donut-graph',
@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./donut-graph.component.scss'],
 })
 export class DonutGraphComponent implements OnInit {
-  labels: string[] = ['Yepale', 'Buenas tardes', 'Ey que pasa'];
-  data: number[][] = [[50, 150, 120]];
+  @Input() labels: string[];
+  @Input() data: number[][] = [[50, 150, 120]];
+  @Input() title: string;
 
   constructor() {}
 

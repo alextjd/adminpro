@@ -6,18 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./graphs.component.scss'],
 })
 export class GraphsComponent implements OnInit {
-  public doughnutChartLabels: string[] = [
-    'Download Sales',
-    'In-Store Sales',
-    'Mail-Order Sales',
-  ];
-  public doughnutChartData: number[][] = [
-    [350, 450, 100],
-    [50, 150, 120],
-    [250, 130, 70],
-  ];
-  public doughnutChartType: string = 'doughnut';
-
   graficos: any = {
     grafico1: {
       labels: ['Con Frijoles', 'Con Natilla', 'Con tocino'],

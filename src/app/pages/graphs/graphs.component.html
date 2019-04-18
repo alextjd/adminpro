@@ -2,7 +2,11 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <app-donut-graph></app-donut-graph>
+        <app-donut-graph
+          [labels]="graficos.grafico1.labels"
+          [data]="graficos.grafico1.data"
+          title="Mi grafiquete"
+        ></app-donut-graph>
       </div>
     </div>
   </div>
