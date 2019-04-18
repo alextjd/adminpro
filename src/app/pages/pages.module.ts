@@ -9,6 +9,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { FormsModule } from '@angular/forms';
 import { PagesRoutingModule } from './pages.routes';
 import { ReusableModule } from '../reusable/reusable.module';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReusableModule } from '../reusable/reusable.module';
     ProgressComponent,
     GraphsComponent,
     PagesComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     SharedModule,
