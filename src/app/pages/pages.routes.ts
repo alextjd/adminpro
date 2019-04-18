@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GraphsComponent } from './graphs/graphs.component';
 import { NgModule } from '@angular/core';
 import { ProgressComponent } from './progress/progress.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 export const pagesRoutes: Routes = [
   {
@@ -17,6 +18,10 @@ export const pagesRoutes: Routes = [
       {
         path: 'graphs',
         component: GraphsComponent,
+      },
+      {
+        path: 'account-settings',
+        component: AccountSettingsComponent,
       },
       {
         path: 'progress',
