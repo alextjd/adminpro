@@ -7,7 +7,7 @@ import { mainThemeId } from '../models/keywords';
   providedIn: 'root',
 })
 export class AccountSettingsService {
-  settings: Settings = {
+  private settings: Settings = {
     themeUrl: 'assets/css/colors/default.css',
     theme: 'default',
   };
@@ -24,6 +24,10 @@ export class AccountSettingsService {
     const userSettings: string = localStorage.getItem('settings');
     this.settings = userSettings ? JSON.parse(userSettings) : this.settings;
     this.applyTheme(this.settings.theme);
+  }
+
+  getCurrentTheme() {
+    return this.settings.theme;
   }
 
   applyTheme(theme: string) {

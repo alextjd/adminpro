@@ -12,7 +12,9 @@ export class AccountSettingsComponent implements OnInit {
 
   constructor(public _settings: AccountSettingsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.selectedTheme = this._settings.getCurrentTheme();
+  }
 
   // Update color theme
   changeColor(color: string) {
