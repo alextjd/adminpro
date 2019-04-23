@@ -14,18 +14,30 @@ export const pagesRoutes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent,
+        data: {
+          title: 'Dashboard',
+        },
       },
       {
         path: 'graphs',
         component: GraphsComponent,
+        data: {
+          title: 'Graphs',
+        },
       },
       {
         path: 'account-settings',
         component: AccountSettingsComponent,
+        data: {
+          title: 'Account settings',
+        },
       },
       {
         path: 'progress',
         component: ProgressComponent,
+        data: {
+          title: 'Progress',
+        },
       },
       {
         path: '',
