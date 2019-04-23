@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { PagesRoutingModule } from './pages.routes';
 import { ReusableModule } from '../reusable/reusable.module';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     LayoutModule,
     FormsModule,
     ReusableModule,
+    CommonModule,
     PagesRoutingModule,
   ],
   exports: [

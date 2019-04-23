@@ -9,22 +9,16 @@ import { mainThemeId } from 'src/app/shared/models/keywords';
   styleUrls: ['./account-settings.component.scss'],
 })
 export class AccountSettingsComponent implements OnInit {
+  selectedTheme: string = 'default';
+
   constructor(@Inject(DOCUMENT) private document) {}
 
   ngOnInit() {}
 
   // Update color theme
-  changeColor(color: string, ref: any) {
+  changeColor(color: string) {
     const url: string = `assets/css/colors/${color}.css`;
     this.document.getElementById(mainThemeId).setAttribute('href', url);
-    this.applyCheck(ref);
-  }
-
-  applyCheck(ref: any) {
-    const themes: any = document.getElementsByClassName('selector');
-    for (const theme of themes) {
-      theme.classList.remove('working');
-    }
-    ref.classList.add('working');
+    this.selectedTheme = color;
   }
 }
