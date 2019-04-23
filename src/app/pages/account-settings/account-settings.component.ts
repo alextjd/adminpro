@@ -1,7 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { DOCUMENT } from '@angular/common';
-import { mainThemeId } from 'src/app/shared/models/keywords';
+import { AccountSettingsService } from 'src/app/shared/services/account-settings.service';
 
 @Component({
   selector: 'app-account-settings',
@@ -9,16 +8,15 @@ import { mainThemeId } from 'src/app/shared/models/keywords';
   styleUrls: ['./account-settings.component.scss'],
 })
 export class AccountSettingsComponent implements OnInit {
-  selectedTheme: string = 'default';
+  selectedTheme: string;
 
-  constructor(@Inject(DOCUMENT) private document) {}
+  constructor(public _settings: AccountSettingsService) {}
 
   ngOnInit() {}
 
   // Update color theme
   changeColor(color: string) {
-    const url: string = `assets/css/colors/${color}.css`;
-    this.document.getElementById(mainThemeId).setAttribute('href', url);
     this.selectedTheme = color;
+    this._settings.applyTheme(color);
   }
 }
