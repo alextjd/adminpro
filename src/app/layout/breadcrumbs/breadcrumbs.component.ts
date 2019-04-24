@@ -10,11 +10,11 @@ import { filter, map } from 'rxjs/operators';
 })
 export class BreadcrumbsComponent implements OnInit {
   title: string;
-  constructor(private router: Router) {}
-
-  ngOnInit() {
+  constructor(private router: Router) {
     this.setRouteTitle();
   }
+
+  ngOnInit() {}
 
   setRouteTitle() {
     const currentRouteData: Observable<any> = this.router.events.pipe(
@@ -22,7 +22,6 @@ export class BreadcrumbsComponent implements OnInit {
       filter((event: ActivationEnd) => event.snapshot.firstChild === null),
       map((event: ActivationEnd) => event.snapshot.data),
     );
-
     currentRouteData.subscribe(data => {
       this.title = data.title;
     });
